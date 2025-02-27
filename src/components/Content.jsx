@@ -14,86 +14,23 @@ export const Content = () => {
       <br />
       <br />
       <br />
-      <h3 className='text-light'>Review game</h3>
-      <div className="row">
-        <div className="col-4 mb-5 mt-3">
-          <Card style={{ width: '18rem' }}>
-            <Card.Img variant="top" src={card1} />
-            <Card.Body>
-              <Card.Title>Scene 1</Card.Title>
-              <Card.Text>
-                Some quick example text to build on the card title and make up the
-                bulk of the card's content.
-              </Card.Text>
-              <Button variant="primary">Go somewhere</Button>
-            </Card.Body>
-          </Card>
-        </div>
-        <div className="col-4 mb-5 mt-3">
-          <Card style={{ width: '18rem' }}>
-            <Card.Img variant="top" src={card2} />
-            <Card.Body>
-              <Card.Title>Scene 2</Card.Title>
-              <Card.Text>
-                Some quick example text to build on the card title and make up the
-                bulk of the card's content.
-              </Card.Text>
-              <Button variant="primary">Go somewhere</Button>
-            </Card.Body>
-          </Card>
-        </div>
-        <div className="col-4 mb-5 mt-3">
-          <Card style={{ width: '18rem' }}>
-            <Card.Img variant="top" src={card3} />
-            <Card.Body>
-              <Card.Title>Scene 3</Card.Title>
-              <Card.Text>
-                Some quick example text to build on the card title and make up the
-                bulk of the card's content.
-              </Card.Text>
-              <Button variant="primary">Go somewhere</Button>
-            </Card.Body>
-          </Card>
-        </div>
-        <div className="col-4">
-          <Card style={{ width: '18rem' }}>
-            <Card.Img variant="top" src={card4} />
-            <Card.Body>
-              <Card.Title>Scene 4</Card.Title>
-              <Card.Text>
-                Some quick example text to build on the card title and make up the
-                bulk of the card's content.
-              </Card.Text>
-              <Button variant="primary">Go somewhere</Button>
-            </Card.Body>
-          </Card>
-        </div>
-        <div className="col-4">
-          <Card style={{ width: '18rem' }}>
-            <Card.Img variant="top" src={card5} />
-            <Card.Body>
-              <Card.Title>Scene 5</Card.Title>
-              <Card.Text>
-                Some quick example text to build on the card title and make up the
-                bulk of the card's content.
-              </Card.Text>
-              <Button variant="primary">Go somewhere</Button>
-            </Card.Body>
-          </Card>
-        </div>
-        <div className="col-4">
-          <Card style={{ width: '18rem' }}>
-            <Card.Img variant="top" src={card6} />
-            <Card.Body>
-              <Card.Title>Scene 6</Card.Title>
-              <Card.Text>
-                Some quick example text to build on the card title and make up the
-                bulk of the card's content.
-              </Card.Text>
-              <Button variant="primary">Go somewhere</Button>
-            </Card.Body>
-          </Card>
-        </div>
+      <h3 className="text-light">Review game</h3>
+      <div className="row gx-3">
+        {[card1, card2, card3, card4, card5, card6].map((image, index) => (
+          <div key={index} className="col-sm-12 col-md-6 col-lg-4 mb-4">
+            <Card className="h-100 shadow">
+              <Card.Img variant="top" src={image} className="img-fluid" />
+              <Card.Body className="d-flex flex-column">
+                <Card.Title>Scene {index + 1}</Card.Title>
+                <Card.Text>
+                  Some quick example text to build on the card title and make up the
+                  bulk of the card's content.
+                </Card.Text>
+                <Button variant="primary" className="mt-auto">Go somewhere</Button>
+              </Card.Body>
+            </Card>
+          </div>
+        ))}
       </div>
       <br />
     </div>
