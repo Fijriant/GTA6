@@ -35,8 +35,8 @@ export default function Home() {
         <Carousel.Item>
           <img src={gambar0} className="d-block w-100" alt="First slide" style={{ maxHeight: '100vh', objectFit: 'cover' }} />
           <Carousel.Caption>
-            <p>"Hello Brother</p>
             <h3>Lets play!</h3>
+            <p>"Hello Brother"</p>
           </Carousel.Caption>
         </Carousel.Item>
         <Carousel.Item>
